@@ -45,8 +45,8 @@ export default function Home() {
                 Use the following commands to test the included API routes. Make sure the development server is running.
               </p>
               <div className="space-y-2">
-                <CodeBlock command="curl http://localhost:9002/api" />
-                <CodeBlock command="curl http://localhost:9002/api/health" />
+                <CodeBlock command="curl http://localhost:3000/api" />
+                <CodeBlock command="curl http://localhost:3000/api/health" />
               </div>
             </div>
             <div className="space-y-4">
