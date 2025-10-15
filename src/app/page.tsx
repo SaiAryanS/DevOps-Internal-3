@@ -55,7 +55,7 @@ export default function Home() {
                 Follow the instructions in the `README.md` file to run this application locally, run tests, and deploy it using Docker.
               </p>
               <div className="flex gap-4">
-                <a href="#" rel="noopener noreferrer">
+                <a href="https://github.com/firebase/studio-seed-docker-next#readme" target="_blank" rel="noopener noreferrer">
                   <Button>Read Documentation</Button>
                 </a>
               </div>
