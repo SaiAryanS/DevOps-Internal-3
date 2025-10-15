@@ -30,7 +30,7 @@ RUN adduser --system --uid 1001 nextjs
 # This includes the standalone server and node_modules
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 # Copy public assets
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+#COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 # Copy static assets from .next
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 

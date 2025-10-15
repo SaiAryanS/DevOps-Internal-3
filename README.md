@@ -116,7 +116,7 @@ docker build -t dockerized-node-starter .
 Run the container, mapping the port and providing the environment file.
 
 ```bash
-docker run -p 3000:3000 --env-file .env --name node-starter-app dockerized-node-starter
+docker run -p 3000:3000 --env-file .env.example --name node-starter-app dockerized-node-starter
 ```
 The application will be accessible at `http://localhost:3000`.
 

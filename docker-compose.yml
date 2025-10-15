@@ -9,6 +9,6 @@ services:
       # Map the host port (from .env, default 3000) to the container port 3000
       - "${PORT:-3000}:3000"
     env_file:
-      - .env
+      - .env.example
     restart: unless-stopped
     container_name: dockerized-node-starter-app
