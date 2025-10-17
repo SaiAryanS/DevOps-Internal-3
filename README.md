@@ -29,6 +29,10 @@ The project follows the standard Next.js App Router structure. Key files and dir
 │   │   ├── api
 │   │   │   ├── health/
 │   │   │   │   └── route.ts  # Health check endpoint
+│   │   │   ├── items/
+│   │   │   │   ├── [id]/
+│   │   │   │   │   └── route.ts # CRUD ops for a single item
+│   │   │   │   └── route.ts   # GET and POST for items
 │   │   │   └── route.ts      # Root API endpoint
 │   │   ├── globals.css     # Global styles & theme
 │   │   ├── layout.tsx      # Root layout
@@ -98,6 +102,28 @@ You can interact with the API endpoints using `curl` or any API client. The deve
   ```json
   {"status":"healthy"}
   ```
+
+- **In-Memory CRUD API Endpoints**:
+  - **GET all items**:
+    ```bash
+    curl http://localhost:9002/api/items
+    ```
+  - **POST a new item**:
+    ```bash
+    curl -X POST -H "Content-Type: application/json" -d '{"name":"My New Item"}' http://localhost:9002/api/items
+    ```
+  - **GET a single item by ID**:
+    ```bash
+    curl http://localhost:9002/api/items/1
+    ```
+  - **PUT (update) an item by ID**:
+    ```bash
+    curl -X PUT -H "Content-Type: application/json" -d '{"name":"Updated Name"}' http://localhost:9002/api/items/1
+    ```
+  - **DELETE an item by ID**:
+    ```bash
+    curl -X DELETE http://localhost:9002/api/items/1
+    ```
 
 ## Containerization with Docker
 
